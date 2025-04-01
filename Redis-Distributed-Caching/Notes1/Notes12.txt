@@ -1,0 +1,5 @@
+﻿1.StackExchangeRedis kutuphanesini yukluyoruz
+2.AddStackExchangeRedisCache servisini uygulamaya eklıyoruz
+3.IDistrubutedCache referansını inject ediyoruz
+4.SetString metodu ıle metınsel,Set metodu ıle ise binary olarak verileri redis'e cache'leyebiliriz.Aynı sekılde GetString ve Get metodları ile cache'lenmıs verılerı elde edebılırsınız.
+5.Remove fonksiyonuı ile cachelenmıs verılerı sılebılırz
