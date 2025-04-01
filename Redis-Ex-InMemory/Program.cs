@@ -1,12 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer(); // Swagger için gerekli
+builder.Services.AddSwaggerGen(); // Swagger için gerekli
 
-//Redis Ýçin ilk olarak cache servisini ekliyoruz
 builder.Services.AddMemoryCache();
 
 var app = builder.Build();
@@ -14,16 +12,17 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger(); // Swagger'ý aktif et
+    app.UseSwaggerUI(); // Swagger UI'yi aktif et
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
+
+
+
 /*
 1.AddMemoryCache servisi uygulamaya eklenir
 2.InMemoryCache referansýný inject edilir

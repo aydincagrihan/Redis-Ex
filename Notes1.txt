@@ -1,0 +1,20 @@
+docker üzerinden redis  container kurmak
+docker run --name redis -p 1453:6379 -d redis
+
+kurulum kontrol etme:
+docker ps
+
+kurulan sunucuyu kontrol etme
+docker exec -it 8rc(bu unique key baslangici) redic-cli
+
+sonra ping atýyoruz pong dönerse baþarýlý
+
+
+# Redis veri türü açýsýndan oldukca zengin bir veritabanýdýr
+String:Redisin en temel ve en basit veri türüdür.Metinsel Deðerlerle birlikte her turlu verýyý saklamak ýcýn kullanýlýr.Hatta binary  olarak resim,dosya vs verileri de saklayabilmektedir
+List:Deðerleri kolaksiyonel olarak tutan bir türüdür
+Set:Verileri rastgele bir düzende unique bir biçimde tutan veri türüdür.
+Sorted Set:Set'in düzenli bir þekilde tutan versiyonudur.
+Hash:Key-Value formatýnda veri tutan türdür.
+Streams:Log gibi hareket eden bir veri türüdür.Streams event'lerin oluþturduklarý sýrayla kaydedilmelerini ve daha sonra ýslenmelerýný saglar
+GeospatialIndexes:Cografi koordinalarýn saklanmasýný saglayan veri türüdür.
