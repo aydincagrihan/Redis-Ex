@@ -1,0 +1,6 @@
+@Redis_Ex_InMemory_HostAddress = http://localhost:5115
+
+GET {{Redis_Ex_InMemory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
