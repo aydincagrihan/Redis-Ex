@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemory-Caching", "Redis-Ex-InMemory\InMemory-Caching.csproj", "{FC1CF2F2-5E87-4824-B2C3-A85C48E8E146}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.InMemory-Caching", "Redis-Ex-InMemory\1.InMemory-Caching.csproj", "{FC1CF2F2-5E87-4824-B2C3-A85C48E8E146}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		Notes1.txt = Notes1.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis-Distributed-Caching", "Redis-Distributed-Caching\Redis-Distributed-Caching.csproj", "{76281999-4A0E-4436-B237-FA0E82FB1F60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Redis-Distributed-Caching", "Redis-Distributed-Caching\2.Redis-Distributed-Caching.csproj", "{76281999-4A0E-4436-B237-FA0E82FB1F60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis.Pub.Sub.Publisher.Example", "Redis.Pub.Sub\Redis.Pub.Sub.Publisher.Example.csproj", "{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pub.Sub", "Pub.Sub", "{B15953BD-F041-4846-AA8E-EA780C75862E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Pub.Sub", "3.Pub.Sub", "{B15953BD-F041-4846-AA8E-EA780C75862E}"
 	ProjectSection(SolutionItems) = preProject
 		Pub.Sub.MessageBroker.txt = Pub.Sub.MessageBroker.txt
 	EndProjectSection

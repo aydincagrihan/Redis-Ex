@@ -18,3 +18,21 @@ Sorted Set:Set'in düzenli bir þekilde tutan versiyonudur.
 Hash:Key-Value formatýnda veri tutan türdür.
 Streams:Log gibi hareket eden bir veri türüdür.Streams event'lerin oluþturduklarý sýrayla kaydedilmelerini ve daha sonra ýslenmelerýný saglar
 GeospatialIndexes:Cografi koordinalarýn saklanmasýný saglayan veri türüdür.
+
+
+6.ders Redis Replication Davranýþý nedir!!!!!!!!!!!!!!!!!!!
+Replication, Redis sunucularýnýn birden fazla kopyasýný oluþturma ve bu kopyalarýn senkronizasyonunu saðlama iþlemidir. Bu, veri kaybýný önlemek ve yüksek eriþilebilirlik saðlamak için önemlidir. Replication, bir ana sunucu (master) ve bir veya daha fazla yedek sunucu (slave) arasýnda veri senkronizasyonu saðlar. Ana sunucu, verileri yedek sunuculara gönderir ve yedek sunucular bu verileri alarak kendi veritabanlarýný günceller.
+
+Replication ozellýgýnde master ve slave arasýnda kurulan býr baglantý uzerýnden masterdaký tum degýsýklýkler anlýk olarak slave sunuculara aktarýlýyor olacaktýrç.Bu baglantý  koptugunda otomatýk olarak  yenýden saglanýlarak verýsel guvence sergýlenmeye calýsýlacaktýr.
+Egerký master ýle slave arasýnda verýsel býr esýtleme durumu tam olarak gerceklesmemisse redis bunun olabilmesi için talepte bulunacak ve master'dan guncel verilerin slave'e aktarýlmasý ýcýn kaynak tuketýmýne devam edecektir.
+-Slave sunucular readonlydir yazýlýmsal degýsýklýkler master da yapýlýr slavelere daðýtýlýr tam tersi söz konusu deðildir.ama illede yapmak isteniyorsa yapýlabilir.redis desteklemektedir.
+
+bu iþlemler için powershell uzerýnden 2 image ayaða kaldýrýyoruz
+
+docker run -p 1453:6380 --name redis-master -d redis
+docker run -p 1453:6381 --name redis-slave -d redis
+docker run -p 1453:6381 --name redis-slave --link redis-master:master -d redis
+
+
+7.Son Ders Redis Sentinel
+Redis Sentinel, Redis sunucularýnýn izlenmesi ve yönetilmesi için kullanýlan bir bileþendir. Sentinel, Redis sunucularýnýn durumunu izler, arýzalarý tespit eder ve gerektiðinde otomatik olarak failover iþlemi gerçekleþtirir. Bu, yüksek eriþilebilirlik saðlamak için önemlidir. Sentinel, bir ana sunucu (master) ve bir veya daha fazla yedek sunucu (slave) arasýnda otomatik geçiþ yapabilir.
