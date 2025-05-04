@@ -1,6 +1,33 @@
-2 powershell command line a��yoruz
-docker exec it <container_id> redis-cli --raw komutunu �al��t�r�yoruz
+﻿2 powershell command line açıyoruz
+docker exec it <container_id> redis-cli --raw komutunu çalıştırıyoruz
 
 
-bu pencerelerden biri publisher di�eri ise consumer g�revi g�recektir.Haliyle �ncelikle consumer g�revi g�recek olan da 'subscribe..channel..' talimat�n� vererek gelecek olan mesajlara abone oluyoruz.
-// publisher olan pencerede ise 'publish..channel..' komutunu vererek mesaj g�nderiyoruz.
+bu pencerelerden biri publisher diğeri ise consumer görevi görecektir.Haliyle öncelikle consumer görevi görecek olan da 'subscribe..channel..' talimatını vererek gelecek olan mesajlara abone oluyoruz.
+// publisher olan pencerede ise 'publish..channel..' komutunu vererek mesaj gönderiyoruz.
+
+
+📌 Redis Pub/Sub Nedir?
+Redis’in Publisher/Subscriber (Yayıncı/Abone) modeli, bir mesajlaşma sistemidir. Yayıncı bir mesajı bir kanala (channel) gönderir, abone olanlar ise bu mesajı anında alır. Bu modelde:
+
+Publisher (yayıncı): Mesajı yayınlayan taraf.
+
+Subscriber (abone): Belirli kanallara abone olan ve gelen mesajları dinleyen taraf.
+
+🎯 Neden Kullanılır?
+Gerçek zamanlı iletişim gerekir (örneğin: chat uygulamaları, bildirim sistemleri).
+
+Bileşenler arasında loosely-coupled (gevşek bağlı) haberleşme sağlamak istenir.
+
+Arka plan işleyicileri veya mikro servisler arasında olay tabanlı haberleşme kurmak için.
+
+✅ Avantajları:
+Gerçek zamanlıdır.
+
+Kurulumu kolaydır.
+
+Redis gibi hafif bir sistemle yüksek performans sağlar.
+
+❗ Not:
+Redis Pub/Sub verileri kalıcı olarak saklamaz, sadece o anda abone olanlara mesaj iletilir. Bu nedenle mesaj kaçırma ihtimali vardır. Kalıcılık gerekirse Kafka gibi sistemler tercih edilir.
+
+Kullanmayı düşündüğünüz senaryoyu da paylaşırsanız, daha özel bir açıklama yapabilirim.
