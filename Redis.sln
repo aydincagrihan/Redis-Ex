@@ -1,16 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemory-Caching", "Redis-Ex-InMemory\InMemory-Caching.csproj", "{FC1CF2F2-5E87-4824-B2C3-A85C48E8E146}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		Notes1.txt = Notes1.txt
+		Pub.Sub.MessageBroker.txt = Pub.Sub.MessageBroker.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis-Distributed-Caching", "Redis-Distributed-Caching\Redis-Distributed-Caching.csproj", "{76281999-4A0E-4436-B237-FA0E82FB1F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis.Pub.Sub", "Redis.Pub.Sub\Redis.Pub.Sub.csproj", "{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{76281999-4A0E-4436-B237-FA0E82FB1F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76281999-4A0E-4436-B237-FA0E82FB1F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76281999-4A0E-4436-B237-FA0E82FB1F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B82CD4-FEFF-4993-838C-0DD8F060BFBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

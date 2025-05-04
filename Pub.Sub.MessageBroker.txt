@@ -1,0 +1,6 @@
+2 powershell command line açýyoruz
+docker exec it <container_id> redis-cli --raw komutunu çalýþtýrýyoruz
+
+
+bu pencerelerden biri publisher diðeri ise consumer görevi görecektir.Haliyle öncelikle consumer görevi görecek olan da 'subscribe..channel..' talimatýný vererek gelecek olan mesajlara abone oluyoruz.
+// publisher olan pencerede ise 'publish..channel..' komutunu vererek mesaj gönderiyoruz.

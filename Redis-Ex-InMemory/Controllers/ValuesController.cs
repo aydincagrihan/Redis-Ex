@@ -44,7 +44,6 @@ namespace Redis_Ex_InMemory.Controllers
         }
         [HttpGet("GetDate")]
 
-
         public DateTime GetDate()
         {
          return   _memoryCache.Get<DateTime>("date");
